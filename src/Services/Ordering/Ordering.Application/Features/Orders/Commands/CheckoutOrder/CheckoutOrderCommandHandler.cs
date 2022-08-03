@@ -29,7 +29,7 @@ public class CheckoutOrderCommandHandler : IRequestHandler<CheckoutOrderCommand,
 
         var newOrder = await _orderRepository.AddAsync(orderEntity);
         
-        _logger.LogInformation("Order {OrderId} is successfuly created,", newOrder.Id);
+        _logger.LogInformation("Order {OrderId} is successfully created", newOrder.Id);
 
         await SendMail(newOrder);
 
