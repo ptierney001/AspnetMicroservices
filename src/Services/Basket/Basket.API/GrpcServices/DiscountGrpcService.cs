@@ -11,7 +11,7 @@ public class DiscountGrpcService
         _discountProtoService = discountProtoService ?? throw new ArgumentNullException(nameof(discountProtoService));
     }
 
-    public async Task<CouponModel> GetDiscount(string productName)
+    public async Task<CouponModel> GetDiscount(string? productName)
     {
         var discountRequest = new GetDiscountRequest { ProductName = productName };
 
